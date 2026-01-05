@@ -8,7 +8,7 @@ const novaPath = path.resolve(__dirname, 'vendor/laravel/nova')
 
 mix
     .setPublicPath("dist")
-    .js("resources/js/field.js", "dist/js/image-cropper.js")
+    .js("resources/js/field.js", "dist/js/nova-image-cropper.js")
     .vue({ version: 3 })
     .webpackConfig({
         externals: {
@@ -23,6 +23,6 @@ mix
             symlinks: false,
         },
         output: {
-            uniqueName: 'onestrive/nova-image-cropper',
+            uniqueName: 'one-strive/nova-image-cropper',
         }
     })

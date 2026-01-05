@@ -29,7 +29,7 @@ See [Intervention requirements](http://image.intervention.io/getting_started/ins
 Install the package into a Laravel application with Nova using Composer:
 
 ```bash
-composer require onestrive/nova-image-cropper
+composer require one-strive/nova-image-cropper
 ```
 
 If you want to use Imagick as the default image processing library, follow the [Intervention documentation for Laravel](http://image.intervention.io/getting_started/installation#laravel).
