@@ -1,6 +1,6 @@
 <?php
 
-namespace Ultrasimplified\ImageCropper;
+namespace OneStrive\NovaImageCropper;
 
 use Illuminate\Support\Facades\Storage;
 use Laravel\Nova\Fields\Image;
@@ -16,7 +16,7 @@ class ImageCropper extends Image
      *
      * @var string
      */
-    public $component = 'advanced-image';
+    public $component = 'nova-image-cropper';
 
     /**
      * Indicates whether the image should be fully rounded or not.
@@ -106,7 +106,6 @@ class ImageCropper extends Image
 
         return $this;
     }
-
 
     /**
      * Prepare the field element for JSON serialization.

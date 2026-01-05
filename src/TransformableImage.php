@@ -1,6 +1,6 @@
 <?php
 
-namespace Ultrasimplified\ImageCropper;
+namespace OneStrive\NovaImageCropper;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;

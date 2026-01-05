@@ -1,6 +1,6 @@
 {
   "name": "ultrasimplified/nova5-image-cropper",
-  "description": "An advanced image field for Nova with crop and resize.",
+  "description": "An advanced image field for Nova with crop and resize. Security-focused fork addressing critical JS dependency vulnerabilities.",
   "keywords": [
     "laravel",
     "nova",
@@ -12,7 +12,9 @@
     "image resize",
     "advanced",
     "advanced image",
-    "advanced image field"
+    "advanced image field",
+    "security",
+    "security-update"
   ],
   "license": "MIT",
   "require": {
@@ -22,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Ultrasimplified\\ImageCropper\\": "src/"
+      "OneStrive\\NovaImageCropper\\": "src/"
     }
   },
   "repositories": [
@@ -34,7 +36,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Ultrasimplified\\ImageCropper\\FieldServiceProvider"
+        "OneStrive\\NovaImageCropper\\FieldServiceProvider"
       ]
     }
   },

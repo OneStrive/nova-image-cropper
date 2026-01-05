@@ -1,10 +1,17 @@
 # Nova5 Image Cropper Field (formerly Nova advanced image field)
 
+> **Security Update Notice**: This package is a security-focused fork of [ultrasimplified/nova5-image-cropper](https://github.com/UltraSimplified/nova5-image-cropper). It addresses critical security vulnerabilities in JavaScript dependencies, specifically removing the vulnerable `vue-template-compiler` package and updating the build configuration for Vue 3 compatibility. Full credit goes to the original authors listed below.
+
 This package provides an advanced image field for Nova 5 resources allowing you to upload, crop and resize any image. It uses [Cropper.js](https://fengyuanchen.github.io/cropperjs) with [vue-cropperjs](https://github.com/Agontuk/vue-cropperjs) in the frontend and [Intervention Image](http://image.intervention.io) in the backend.
 
 This version has been updated to use the current v3 build of Intervention/Image and has increased compatibility with Laravel Nova version 5.
 
-It has been renamed to Nova5 Image Cropper to make it easier for Nova 5 users to find a tool to meet their image cropping needs.
+
+## What's Different in This Fork
+
+This security-focused fork includes the following updates:
+- **Removed vulnerable dependencies**: Eliminated `vue-template-compiler` (XSS vulnerability CVE-2024-9506)
+- **Zero vulnerabilities**: All npm security audits pass with 0 vulnerabilities
 
 ![screenshot of the advanced image field](https://raw.githubusercontent.com/UltraSimplified/nova5-image-cropper/master/screenshot.png)
 
@@ -22,7 +29,7 @@ See [Intervention requirements](http://image.intervention.io/getting_started/ins
 Install the package into a Laravel application with Nova using Composer:
 
 ```bash
-composer require ultrasimplified/nova5-image-cropper
+composer require OneStrive/nova-image-cropper
 ```
 
 If you want to use Imagick as the default image processing library, follow the [Intervention documentation for Laravel](http://image.intervention.io/getting_started/installation#laravel).
@@ -45,7 +52,7 @@ This will provide you with a new configuration file (config/image.php) where you
 namespace App\Nova;
 
 // ...
-use Ultrasimplified\ImageCropper\ImageCropper;
+use OneStrive\NovaImageCropper\ImageCropper;
 
 class Post extends Resource
 {

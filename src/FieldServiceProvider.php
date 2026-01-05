@@ -1,6 +1,6 @@
 <?php
 
-namespace Ultrasimplified\ImageCropper;
+namespace OneStrive\NovaImageCropper;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
@@ -16,7 +16,7 @@ class FieldServiceProvider extends ServiceProvider
     public function boot()
     {
         Nova::serving(function (ServingNova $event) {
-            Nova::script('advanced-image', __DIR__ . '/../dist/js/nova5-image-cropper.js');
+            Nova::script('nova-image-cropper', __DIR__ . '/../dist/js/nova-image-cropper.js');
         });
     }
 
