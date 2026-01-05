@@ -23,6 +23,6 @@ mix
             symlinks: false,
         },
         output: {
-            uniqueName: 'OneStrive/nova-image-cropper',
+            uniqueName: 'onestrive/nova-image-cropper',
         }
     })

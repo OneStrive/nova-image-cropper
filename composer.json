@@ -1,5 +1,5 @@
 {
-  "name": "OneStrive/nova-image-cropper",
+  "name": "onestrive/nova-image-cropper",
   "description": "An advanced image field for Nova with crop and resize. Security-focused fork addressing critical JS dependency vulnerabilities.",
   "keywords": [
     "laravel",
