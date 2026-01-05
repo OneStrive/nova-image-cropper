@@ -21,7 +21,7 @@
         "sass": "^1.43.4",
         "sass-loader": "^12.3.0",
         "uid": "^2.0.2",
-        "vue-loader": "^16.8.3"
+        "vue-loader": "^17.4.2"
     },
     "dependencies": {
         "vue-cropperjs": "^5.0.0",
