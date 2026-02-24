@@ -227,6 +227,10 @@ trait TransformableImage
      */
     private function cropImage(object $cropperData)
     {
+        if($cropperData->width <= 0 || $cropperData->height <= 0) {
+            return;
+        }
+
         $this->image->crop($cropperData->width, $cropperData->height, $cropperData->x, $cropperData->y);
     }
 
