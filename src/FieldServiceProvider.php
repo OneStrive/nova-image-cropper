@@ -17,6 +17,7 @@ class FieldServiceProvider extends ServiceProvider
     {
         Nova::serving(function (ServingNova $event) {
             Nova::script('nova-image-cropper', __DIR__ . '/../dist/js/nova-image-cropper.js');
+            Nova::style('nova-image-cropper', __DIR__ . '/../dist/css/nova-image-cropper.css');
         });
     }
 
