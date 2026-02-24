@@ -6,6 +6,9 @@ const novaPath = path.resolve(__dirname, "vendor/laravel/nova");
 
 export default defineConfig({
     plugins: [vue()],
+    define: {
+        "process.env.NODE_ENV": JSON.stringify("production"),
+    },
     build: {
         outDir: "dist",
         lib: {
@@ -16,12 +19,11 @@ export default defineConfig({
             cssFileName: "nova-image-cropper",
         },
         rollupOptions: {
-            external: ["vue", "axios", "vuex"],
+            external: ["vue", "axios"],
             output: {
                 globals: {
                     vue: "Vue",
                     axios: "axios",
-                    vuex: "Vuex",
                 },
                 assetFileNames: "css/[name].[ext]",
             },
