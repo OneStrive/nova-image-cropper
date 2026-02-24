@@ -1,35 +1,20 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
+        "dev": "vite build --watch",
+        "watch": "vite build --watch",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "vite build"
     },
     "devDependencies": {
-        "@inertiajs/inertia": "^0.11.0",
-        "@inertiajs/inertia-vue3": "^0.6.0",
-        "@vue/babel-plugin-jsx": "^1.1.1",
-        "@vue/compiler-sfc": "^3.2.33",
-        "cross-env": "^7.0.3",
-        "form-backend-validation": "^2.3.3",
-        "laravel-mix": "^6.0.43",
-        "resolve-url-loader": "^5.0.0",
-        "sass": "^1.43.4",
-        "sass-loader": "^12.3.0",
+        "@vitejs/plugin-vue": "^5.2.1",
+        "@vue/compiler-sfc": "^3.5.0",
+        "lodash": "^4.17.23",
         "uid": "^2.0.2",
-        "vue-loader": "^16.8.3"
+        "vite": "^6.1.0"
     },
     "dependencies": {
         "vue-cropperjs": "^5.0.0",
         "vuex": "^4.0.2"
-    },
-    "overrides": {
-        "webpack-dev-server": "^5.2.2",
-        "axios": "^1.13.2",
-        "postcss": "^8.4.31"
     }
 }
