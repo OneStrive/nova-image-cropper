@@ -7,7 +7,7 @@
         "production": "vite build"
     },
     "devDependencies": {
-        "@vitejs/plugin-vue": "^5.2.1",
+        "@vitejs/plugin-vue": "^6.0.5",
         "@vue/compiler-sfc": "^3.5.0",
         "lodash": "^4.17.23",
         "uid": "^2.0.2",
