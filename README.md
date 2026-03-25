@@ -87,6 +87,21 @@ class Post extends Resource
                 ->croppable()
                 ->resize(400, 300),
 
+            // Enforce minimum crop dimensions (client-side and server-side)
+            // Client-side: blocks form submission and shows a toast error if the crop area is too small.
+            // Server-side: pass minWidth/minHeight into a custom validation rule.
+            //
+            // Add these properties to your Nova resource class:
+            //
+            //   protected int $minWidth = 1920;
+            //   protected int $minHeight = 600;
+            //
+            ImageCropper::make('photo')
+                ->croppable()
+                ->minWidth($this->minWidth)
+                ->minHeight($this->minHeight)
+                ->updateRules(['sometimes', 'image', new CroppedImageDimensions($this->minWidth, $this->minHeight)]),
+
             // Override the image processing driver for this field only
             ImageCropper::make('photo')->driver('imagick')->croppable(),
 

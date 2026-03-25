@@ -1,5 +1,24 @@
 # Release Notes
 
+## [v5.1.0] - Validation & UX Improvements
+
+### Added
+- `minWidth` and `minHeight` methods to enforce minimum image/crop dimensions
+- Client-side toast error on form submit when crop area is below the minimum size (blocks submission)
+- Live crop area indicator (green/valid, red/too small) shown while the cropper is visible
+- Help text turns red when the image or crop area does not meet the minimum dimensions
+- Plain image preview when the uploaded image exactly matches the minimum size (no cropping needed)
+- True pixel dimension detection via `createImageBitmap` to avoid DPI-metadata issues
+
+### Fixed
+- Images at exactly the minimum size are now accepted without being blocked
+- Form submission no longer silently drops the file when dimensions are invalid; backend validation is always reached
+- Zero-dimension crop data no longer causes a `ValueError` in GD when the user never interacts with the cropper
+
+> Released 2026/03/25
+
+---
+
 ## [v5.0.0] - Security Update Fork
 
 ### Security
