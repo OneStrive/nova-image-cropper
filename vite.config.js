@@ -2,8 +2,6 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
 
-const novaPath = path.resolve(__dirname, "vendor/laravel/nova");
-
 export default defineConfig({
     plugins: [vue()],
     define: {
@@ -19,11 +17,12 @@ export default defineConfig({
             cssFileName: "nova-image-cropper",
         },
         rollupOptions: {
-            external: ["vue", "axios"],
+            external: ["vue", "axios", "laravel-nova"],
             output: {
                 globals: {
                     vue: "Vue",
                     axios: "axios",
+                    "laravel-nova": "LaravelNova",
                 },
                 assetFileNames: "css/[name].[ext]",
             },
@@ -33,10 +32,6 @@ export default defineConfig({
         extensions: [".mjs", ".js", ".jsx", ".json", ".vue"],
         alias: {
             "@": path.resolve(__dirname, "resources/js"),
-            "laravel-nova": path.join(
-                novaPath,
-                "resources/js/mixins/packages.js"
-            ),
         },
     },
 });
